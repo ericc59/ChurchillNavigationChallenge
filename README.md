@@ -1,4 +1,5 @@
 # ChurchillNavigationChallenge
+http://churchillnavigation.com/challenge/
 
 
 ## QuadTree output
