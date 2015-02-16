@@ -179,7 +179,7 @@ static inline void kdtree_return_subtree(KdTree* tree, std::priority_queue<Point
 }
 
 // Depth-first recursive searching the tree with a 2D rectangular range query and return the results in the results container
-static inline void kdtree_search(KdTree* tree, const Rect& query, std::priority_queue<Point*>& results, int& ct) {
+static inline void kdtree_search(KdTree* tree, const Rect& query, std::priority_queue<Point*, std::vector<Point*>> & results, int& ct) {
     
     // If this node's bounds are fully contained within the search query bounds, then return the entire subtree
     if (rects_contained(query, tree->bounds)) {

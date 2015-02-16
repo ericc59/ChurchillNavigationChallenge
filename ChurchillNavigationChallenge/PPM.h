@@ -221,7 +221,7 @@ static void ppm_draw_kdtree(ppm& img, KdTree* tree, ppm::pixel point_color) {
     }
 }
 
-static void ppm_write_pbm(ppm& img, std::string outfile) {
+static void ppm_write(ppm& img, std::string outfile) {
     // Open output stream
     std::ofstream ofs (outfile, std::ofstream::out);
     
