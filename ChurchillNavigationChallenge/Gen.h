@@ -29,11 +29,11 @@ struct QueryResult {
     QueryResult() : i(0), ct_bf(0), ct_qt(0), bf(0), qt(0), kd(0), ct_kd(0) {}
 };
 
-static int rand_num() {
+static inline int rand_num() {
     return rand() % MAX_PT_RANGE;
 }
 
-float random_float(float a, float b) {
+static inline float random_float(float a, float b) {
     float random = ((float) rand()) / (float) RAND_MAX;
     float diff = b - a;
     float r = random * diff;

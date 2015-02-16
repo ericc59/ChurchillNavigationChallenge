@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		270815371A8C0BE900AFEE5C /* QuadTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadTree.h; sourceTree = "<group>"; };
-		2708158E1A8C8DDA00AFEE5C /* PBM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBM.h; sourceTree = "<group>"; };
+		2708158E1A8C8DDA00AFEE5C /* PPM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPM.h; sourceTree = "<group>"; };
 		2708158F1A8C8F1C00AFEE5C /* Gen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gen.h; sourceTree = "<group>"; };
 		270815901A8C8FB200AFEE5C /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		27CB96A01A8D64B100958A50 /* KdTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KdTree.h; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				27D42EF91A89C62B00E88AFF /* ChurchillNavigationChallenge.1 */,
 				27D42F001A89C64000E88AFF /* Shared.h */,
 				270815371A8C0BE900AFEE5C /* QuadTree.h */,
-				2708158E1A8C8DDA00AFEE5C /* PBM.h */,
+				2708158E1A8C8DDA00AFEE5C /* PPM.h */,
 				2708158F1A8C8F1C00AFEE5C /* Gen.h */,
 				270815901A8C8FB200AFEE5C /* Util.h */,
 				27CB96A01A8D64B100958A50 /* KdTree.h */,

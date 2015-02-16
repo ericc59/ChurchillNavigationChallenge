@@ -20,7 +20,7 @@
 #define RENDER_QUADTREE
 
 #ifdef RENDER_QUADTREE
-#include "PBM.h"
+#include "PPM.h"
 #endif
 
 std::vector<QueryResult> query_results;
@@ -73,11 +73,11 @@ int main(int argc, const char * argv[])
     
     
 #ifdef RENDER_QUADTREE
-    pbm quadtree_img(1024, 1024);
-    pbm_draw_quadtree(quadtree_img, qt, pbm::pixel(75, 75, 145));
+    ppm quadtree_img(1024, 1024);
+    ppm_draw_quadtree(quadtree_img, qt, ppm::pixel(75, 75, 145));
     
-    pbm kdtree_img(1024, 1024);
-    pbm_draw_kdtree(kdtree_img, kdt, pbm::pixel(75, 75, 145));
+    ppm kdtree_img(1024, 1024);
+    ppm_draw_kdtree(kdtree_img, kdt, ppm::pixel(75, 75, 145));
 #endif
     
     auto start = std::chrono::steady_clock::now();
@@ -89,8 +89,8 @@ int main(int argc, const char * argv[])
 
     for (std::vector<Rect>::iterator q = queries.begin() ; q != queries.end(); ++q) {
 #ifdef RENDER_QUADTREE
-        pbm_draw_rect_fill(quadtree_img, *q, pbm::pixel(15, 15, 15));
-        pbm_draw_rect_fill(kdtree_img, *q, pbm::pixel(15, 15, 15));
+        ppm_draw_rect_fill(quadtree_img, *q, ppm::pixel(15, 15, 15));
+        ppm_draw_rect_fill(kdtree_img, *q, ppm::pixel(15, 15, 15));
 #endif
         
         std::priority_queue<Point*, std::vector<Point*>> results, results2, results3;
@@ -136,12 +136,12 @@ int main(int argc, const char * argv[])
         
 #ifdef RENDER_QUADTREE
         while (results2.size() > 0) {
-            pbm_set_pt(quadtree_img, results2.top()->x, results2.top()->y, pbm::green);
+            ppm_set_pt(quadtree_img, results2.top()->x, results2.top()->y, ppm::green);
             results2.pop();
         }
         
         while (results3.size() > 0) {
-            pbm_set_pt(kdtree_img, results3.top()->x, results3.top()->y, pbm::green);
+            ppm_set_pt(kdtree_img, results3.top()->x, results3.top()->y, ppm::green);
             results3.pop();
         }
 #endif
@@ -151,8 +151,8 @@ int main(int argc, const char * argv[])
     std::cout << std::endl;
     
 #ifdef RENDER_QUADTREE
-    pbm_write_pbm(quadtree_img, "/Users/ericc/Desktop/quadtree.pbm");
-    pbm_write_pbm(kdtree_img, "/Users/ericc/Desktop/kdtree.pbm");
+    ppm_write_pbm(quadtree_img, "/Users/ericc/Desktop/quadtree.pbm");
+    ppm_write_pbm(kdtree_img, "/Users/ericc/Desktop/kdtree.pbm");
 #endif
     
     float avg_bf = 0;

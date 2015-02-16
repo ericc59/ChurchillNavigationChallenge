@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChurchillNavigationChallenge/QuadTree.h"
-            timestampString = "445482983.793055"
+            timestampString = "445802561.59223"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "quadtree_search(QuadTree* node, const Rect query, std::priority_queue&lt;Point*, std::vector&lt;Point*&gt;&gt;&amp; results, int&amp; ct)"
             landmarkType = "7">
          </BreakpointContent>
